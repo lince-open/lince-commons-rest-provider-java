@@ -21,8 +21,7 @@ public class ResponseHeaderFilter implements Filter {
     @Override
     public void doFilter(ServletRequest request, ServletResponse response,
                          FilterChain chain) throws IOException, ServletException {
-        HttpServletResponse httpServletResponse = (HttpServletResponse) response;
-        httpServletResponse.setHeader("host-name", hostName);
+        ((HttpServletResponse) response).setHeader("host-name", hostName);
         chain.doFilter(request, response);
     }
 
