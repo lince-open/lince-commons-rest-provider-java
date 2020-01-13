@@ -19,7 +19,7 @@ add maven dependency
 add ResponseHeaderFilter to ServletComponentScan on SpringApplication.java 
 
     @SpringBootApplication(scanBasePackages = {"work.lince"})
-    @ServletComponentScan(basePackageClasses = {ResponseHeaderFilter.class})
+    @ServletComponentScan("work.lince")
     public class Application {
     
         public static void main(String[] args) {

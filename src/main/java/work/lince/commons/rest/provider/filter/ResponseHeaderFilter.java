@@ -15,7 +15,7 @@ import java.io.IOException;
 @WebFilter("/*")
 public class ResponseHeaderFilter implements Filter {
 
-    @Value("${lince.hostname:none}")
+    @Value("${info.hostName:none}")
     protected String hostName;
 
     @Override
